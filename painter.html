@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Painter</title>
+    <link rel="stylesheet" href="painter.css">
+</head>
+<body>
+
+    <!-- Screen 1: Size Selection -->
+    <div id="screen-size" class="screen active">
+        <div class="container">
+            <h1>天体の大きさを選んでください</h1>
+            <button class="btn" data-size="50">小さい</button>
+            <button class="btn" data-size="100">普通</button>
+            <button class="btn" data-size="150">大きい</button>
+        </div>
+    </div>
+
+    <!-- Screen 2: Type Selection -->
+    <div id="screen-type" class="screen">
+        <div class="container">
+            <h1>天体の種類を選んでください</h1>
+            <button class="btn" data-type="planet">惑星</button>
+            <button class="btn" data-type="moon">衛星</button>
+        </div>
+    </div>
+
+    <!-- Screen 3: Design -->
+    <div id="screen-design" class="screen">
+        <div id="paint-ui">
+            <div id="color-palette"></div>
+            <button id="btn-ring" class="btn-tool">リングを追加</button>
+            <button id="btn-done" class="btn">完成</button>
+        </div>
+        <canvas id="paint-canvas"></canvas>
+    </div>
+
+    <!-- Screen 4: Naming -->
+    <div id="screen-name" class="screen">
+        <div class="container">
+            <h1>この天体に名前をつけよう</h1>
+            <canvas id="preview-canvas"></canvas>
+            <input type="text" id="planet-name-input" placeholder="天体の名前" maxlength="20">
+            <button id="btn-confirm-name" class="btn">決定</button>
+        </div>
+    </div>
+
+    <!-- Screen 5: Universe -->
+    <div id="screen-universe" class="screen">
+        <canvas id="universe-canvas"></canvas>
+        <button id="btn-create-new" class="btn">新しく天体を作る</button>
+    </div>
+
+    <script src="painter.js"></script>
+</body>
+</html>
